@@ -9,10 +9,12 @@
 header{
     padding: 20px;
     width: 100%;
+    height: 400px;
     background-color: #129799;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
 .lista-inicio{
@@ -49,15 +51,15 @@ h1{
 }
 
 @media(max-width: 1094px){
+
+    header{
+        height: 600px;
+    }
+
     .img-life{
         width: 100%;
     }
-    h1{
-        font-size: 2.6rem;
-    }
-}
 
-@media(max-width: 1092px){
     .caixa{
         height: 400px;
         display: flex;
@@ -72,7 +74,6 @@ h1{
     }
 
     .listas{
-        margin-top: 60px;
         width: 600px;
     }
 
