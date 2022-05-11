@@ -6,6 +6,11 @@
   list-style: none;
 }
 
+body {
+  max-width: 1900px;
+  margin: 0 auto;
+}
+
 header {
   padding: 20px;
   width: 100%;
@@ -18,6 +23,7 @@ header {
 }
 
 .lista-inicio {
+  max-width: 1900px;
   padding: 10px;
   background-color: #129799;
   position: fixed;
@@ -26,10 +32,15 @@ header {
   display: flex;
   justify-content: space-around;
   box-shadow: 0px 4px 7px 0px rgba(255, 255, 255, 0.3);
+  z-index: 9999999;
 }
 
 .lista-inicio li {
   font-size: 1.3rem;
+  cursor: pointer;
+}
+.lista-inicio li:hover {
+  color: blue;
 }
 
 .caixa {
@@ -91,9 +102,43 @@ main {
   width: 580px;
   height: 280px;
   object-fit: cover;
+  transition: 2s all;
+}
+
+.fig {
+  position: relative;
+}
+
+figcaption {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0px;
+  background-color: green;
 }
 
 /* Aqui começa o @media */
+
+@media (max-width: 1220px) {
+  .img-art {
+    transform: scale(0.85);
+  }
+}
+
+@media (max-width: 1170px) {
+  .sec-img {
+    width: 100%;
+  }
+
+  .fig {
+    width: 90%;
+  }
+
+  .img-art {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1094px) {
   .lista-inicio {
     width: 100%;
@@ -122,6 +167,28 @@ main {
 
   .listas {
     width: 600px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container p {
+    width: 100%;
+  }
+
+  .fig {
+    width: 100%;
+  }
+
+  .img-art {
+    height: 500px;
+  }
+
+  .container-figure {
+    flex-direction: column;
+  }
+
+  .container-figure-2 {
+    flex-direction: column;
   }
 }
 
